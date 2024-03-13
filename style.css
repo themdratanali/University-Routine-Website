@@ -1,0 +1,450 @@
+/* Common styles */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    animation: backgroundAnimation 10s linear infinite;
+    background: linear-gradient(-45deg, #EE7752, #c44d2d, #23A6D5, #196aab);
+    background-size: 400% 400%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 50px auto; /* Center the container horizontally */
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.vu {
+    font-size: 34px;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.text {
+    font-size: 17px;
+    margin-top: -17px;
+    text-align: center;
+}
+
+#currentDate {
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-top: -80px;
+    position: absolute;
+    margin-left: 250px;
+    text-align: center;
+    font-size: 17px;
+    color: red;
+}
+
+.search-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    text-align: center;
+}
+
+select:focus {
+    border-color: #196aab;
+    box-shadow: 0 0 5px #196aab;
+}
+
+select option:hover {
+    background-color: #f0f0f0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table, th, td {
+    border: 1px solid #919191;
+    padding: 7px;
+}
+
+td{
+    font-size:14px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+    padding: 2px 0;
+}
+.searchOutput{
+    margin: 20px;
+}
+
+/* Styling for select dropdown */
+
+#section {
+    width: 70px;
+    margin-left:10px;
+}
+
+#semester {
+    width: 150px;
+    margin-right:15px;
+    margin-left:10px;
+}
+
+#department {
+    width: 300px;
+    margin-right:15px;
+    margin-left:10px;
+}
+
+label{
+    font-size: 20px;
+}
+
+select {
+    width: 25%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    text-align: start;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23424242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right top 50%;
+}
+
+/* Styling for select dropdown options */
+select option {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for select dropdown options */
+select option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Focus effect for select dropdown */
+select:focus {
+    border-color: #196aab;
+    box-shadow: 0 0 5px #196aab;
+}
+
+.highlight {
+    background: #fdd047cf;;
+}
+
+.highlight2 {
+    background: #ffe1876e;
+}
+
+/* Media Queries for Tablet and Mobile */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 94%;
+        margin: 500px auto;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 25px;
+        padding: 2px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #f4f4f436;
+    }
+    
+    table, th, td {
+        border: 1px solid #919191;
+        padding: 13px;
+    }
+    
+    td{
+        font-size:18px;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+    }
+
+    .searchOutput table {
+        width: 50%;
+    }
+    /* Styling for select dropdown */
+
+    #section{
+        width: 50px;
+    }
+
+    select {
+    width: 20%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    text-align: start;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23424242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right top 50%;
+    }
+
+    /* Styling for select dropdown options */
+    select option {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for select dropdown options */
+    select option:hover {
+    background-color: #f0f0f0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 25px;
+        padding: 2px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #f4f4f436;
+    }
+    
+    table, th, td {
+        border: 1px solid #919191;
+        padding: 13px;
+    }
+    
+    td{
+        font-size:18px;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+    }
+
+    .searchOutput table {
+        width: 50%;
+    }
+    /* Styling for select dropdown */
+
+    #section{
+        width: 50px;
+    }
+
+    select {
+    width: 20%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    text-align: start;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23424242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right top 50%;
+    }
+
+    /* Styling for select dropdown options */
+    select option {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for select dropdown options */
+    select option:hover {
+    background-color: #f0f0f0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 25px;
+        padding: 2px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: #f4f4f436;
+    }
+    
+    table, th, td {
+        border: 1px solid #919191;
+        padding: 13px;
+    }
+    
+    td{
+        font-size:18px;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+    }
+
+    .searchOutput table {
+        width: 90%;
+    }
+    /* Styling for select dropdown */
+
+    #section{
+        width: 50px;
+    }
+
+    select {
+    width: 20%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+    text-align: start;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23424242" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right top 50%;
+    }
+
+    /* Styling for select dropdown options */
+    select option {
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for select dropdown options */
+    select option:hover {
+    background-color: #f0f0f0;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* Adjust container width */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

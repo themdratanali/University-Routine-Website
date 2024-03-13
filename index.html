@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr University Class Routine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <img src="vu.jpg" class="background-img" alt="Mr University Background Image">
+
+    <script>
+        // Sample search data
+        const searchData = [
+           //Lab Information
+           { name: "Network Lab - LAB-101", code: "NL" },
+
+           //Subject Name Information
+           { name: "Introduction to Computer Science", code: "CSE-1101"},
+    
+           //Teacher Information
+           { name: "Md. Khademul Islam Molla, PhD (Coordinator - CSE) 01727786600", code: "KIM"},
+        ]
+        // Function to perform search
+        function searchNames() {
+            // Get input value
+            const input = document.getElementById("searchInput").value.trim().toUpperCase();
+            const table = document.getElementById("searchOutput");
+
+            // Clear previous search results
+            table.innerHTML = "";
+
+            // Check if input is not empty
+            if (input !== "") {
+                // Search for partial code match
+                const matches = searchData.filter(item => item.code.includes(input));
+
+                // Display full names if matches are found
+                matches.forEach(match => {
+                    const row = table.insertRow();
+                    const cell = row.insertCell();
+                    cell.textContent = `${match.name}`;
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div class="container"> 
+    <h1 class="vu">Mr University</h1>
+    <h3 class="text">All Department Class Routine</h3>
+
+    <div class="search-container">    
+        <input type="text" id="searchInput" onkeyup="searchNames()" placeholder="Search Teacher and Subject Names use short form...">
+    </div>  
+    <table id="searchOutput" border="1" style="width: 50%;margin: 10px auto 20px;text-align: center;"></table>
+
+    <label for="department">Department:</label>
+    <select id="department">
+        <option value="selectdepartment">Select Department</option>
+        <option value="CSE">Computer Science and Engineering</option>
+        <option value="EEE">Electrical and Electronics Engineering</option>
+        <option value="BBA">Business Administration</option>
+        <option value="Law">Law and Human Rights</option>
+        <option value="English">English</option>
+        <option value="Economics">Economics</option>
+        <option value="Journalism">Journalism</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Political Science">Political Science</option>
+        <option value="Public Health">Public Health</option>
+        <option value="Sociology">Sociology</option>
+    </select>
+    
+    <label for="semester">Semester:</label>
+    <select id="semester">
+        <option value="selectsemester">Select Semester</option>
+        <option value="1st">1st Semester</option>
+        <option value="2nd">2nd Semester</option>
+        <option value="3rd">3rd Semester</option>
+        <option value="4th">4th Semester</option>
+        <option value="5th">5th Semester</option>
+        <option value="6th">6th Semester</option>
+        <option value="7th">7th Semester</option>
+        <option value="8th">8th Semester</option>
+        <option value="9th">9th Semester</option>
+        <option value="10th">10th Semester</option>
+        <option value="11th">11th Semester</option>
+        <option value="12th">12th Semester</option>
+    </select>
+
+    <label for="section">Section:</label>
+    <select id="section">
+        <option value="selectsection">Select Section</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+    </select>
+    <table id="routineTable"></table>
+</div>
+
+<footer>
+    <p>&copy; 2024 Mr University. All rights reserved. Developed & Maintained by Md Ratan Ali</p>
+</footer>
+
+<script src="script.js" type="module"></script>
+<script src="routineData.js" type="module"></script>
+<script src="searchData.js" type="module"></script>
+</body>
+</html>
