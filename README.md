@@ -1,6 +1,6 @@
 # Mr University Class Routine Web Application
 
-# This repository contains the source code for a web application designed to display class routines for Mr University. The application allows users to select their department, semester, and section to view their class schedules. It also features a search functionality to find teachers and subjects using short forms.
+This repository contains the source code for a web application designed to display class routines for Mr University. The application allows users to select their department, semester, and section to view their class schedules. It also features a search functionality to find teachers and subjects using short forms.
 
 # Features:
     Dynamic display of class routines based on selected department, semester, and section.
