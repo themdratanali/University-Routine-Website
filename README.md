@@ -31,4 +31,4 @@ To use the application, simply open index.html in a web browser. Select your dep
 Contributions are welcome! If you'd like to contribute to the project, feel free to fork the repository, make your changes, and submit a pull request.
 
 # License:
-This project is licensed under the MIT License.
+This project is licensed under the GPL License.
